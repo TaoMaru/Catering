@@ -22,6 +22,7 @@ Partial Class frmCatering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCatering))
         Me.lblHeading = New System.Windows.Forms.Label()
         Me.lblSubheading = New System.Windows.Forms.Label()
         Me.lblLoyaltyPoints = New System.Windows.Forms.Label()
@@ -66,7 +67,7 @@ Partial Class frmCatering
         'lblLoyaltyPoints
         '
         Me.lblLoyaltyPoints.AutoSize = True
-        Me.lblLoyaltyPoints.Location = New System.Drawing.Point(457, 273)
+        Me.lblLoyaltyPoints.Location = New System.Drawing.Point(497, 352)
         Me.lblLoyaltyPoints.Name = "lblLoyaltyPoints"
         Me.lblLoyaltyPoints.Size = New System.Drawing.Size(51, 17)
         Me.lblLoyaltyPoints.TabIndex = 2
@@ -74,23 +75,26 @@ Partial Class frmCatering
         '
         'txtPoints
         '
-        Me.txtPoints.Location = New System.Drawing.Point(664, 270)
+        Me.txtPoints.Location = New System.Drawing.Point(708, 352)
         Me.txtPoints.Name = "txtPoints"
         Me.txtPoints.Size = New System.Drawing.Size(100, 22)
         Me.txtPoints.TabIndex = 3
         '
         'picPlatter
         '
-        Me.picPlatter.Location = New System.Drawing.Point(610, 55)
+        Me.picPlatter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picPlatter.Image = CType(resources.GetObject("picPlatter.Image"), System.Drawing.Image)
+        Me.picPlatter.Location = New System.Drawing.Point(456, 0)
         Me.picPlatter.Name = "picPlatter"
-        Me.picPlatter.Size = New System.Drawing.Size(100, 50)
+        Me.picPlatter.Size = New System.Drawing.Size(483, 305)
+        Me.picPlatter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picPlatter.TabIndex = 4
         Me.picPlatter.TabStop = False
         '
         'lblPayment
         '
         Me.lblPayment.AutoSize = True
-        Me.lblPayment.Location = New System.Drawing.Point(150, 529)
+        Me.lblPayment.Location = New System.Drawing.Point(203, 568)
         Me.lblPayment.Name = "lblPayment"
         Me.lblPayment.Size = New System.Drawing.Size(51, 17)
         Me.lblPayment.TabIndex = 5
@@ -168,7 +172,7 @@ Partial Class frmCatering
         'lblTotalCost
         '
         Me.lblTotalCost.AutoSize = True
-        Me.lblTotalCost.Location = New System.Drawing.Point(471, 529)
+        Me.lblTotalCost.Location = New System.Drawing.Point(484, 568)
         Me.lblTotalCost.Name = "lblTotalCost"
         Me.lblTotalCost.Size = New System.Drawing.Size(51, 17)
         Me.lblTotalCost.TabIndex = 12
@@ -209,7 +213,7 @@ Partial Class frmCatering
         '
         'btnCalculate
         '
-        Me.btnCalculate.Location = New System.Drawing.Point(460, 388)
+        Me.btnCalculate.Location = New System.Drawing.Point(460, 434)
         Me.btnCalculate.Name = "btnCalculate"
         Me.btnCalculate.Size = New System.Drawing.Size(75, 23)
         Me.btnCalculate.TabIndex = 16
@@ -218,7 +222,7 @@ Partial Class frmCatering
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(664, 387)
+        Me.btnClear.Location = New System.Drawing.Point(689, 435)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(75, 23)
         Me.btnClear.TabIndex = 17
@@ -229,7 +233,7 @@ Partial Class frmCatering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(853, 601)
+        Me.ClientSize = New System.Drawing.Size(940, 675)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.grpPayOption)
