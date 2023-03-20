@@ -112,10 +112,10 @@ Partial Class frmCatering
         Me.radFruit.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radFruit.Location = New System.Drawing.Point(37, 31)
         Me.radFruit.Name = "radFruit"
-        Me.radFruit.Size = New System.Drawing.Size(87, 29)
+        Me.radFruit.Size = New System.Drawing.Size(156, 29)
         Me.radFruit.TabIndex = 6
         Me.radFruit.TabStop = True
-        Me.radFruit.Text = "Fruit"
+        Me.radFruit.Text = "Fruit - 24.99"
         Me.radFruit.UseVisualStyleBackColor = True
         '
         'radDeliMeat
@@ -124,10 +124,10 @@ Partial Class frmCatering
         Me.radDeliMeat.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radDeliMeat.Location = New System.Drawing.Point(37, 77)
         Me.radDeliMeat.Name = "radDeliMeat"
-        Me.radDeliMeat.Size = New System.Drawing.Size(133, 29)
+        Me.radDeliMeat.Size = New System.Drawing.Size(202, 29)
         Me.radDeliMeat.TabIndex = 7
         Me.radDeliMeat.TabStop = True
-        Me.radDeliMeat.Text = "Deli Meat"
+        Me.radDeliMeat.Text = "Deli Meat - 34.99"
         Me.radDeliMeat.UseVisualStyleBackColor = True
         '
         'radPita
@@ -136,10 +136,10 @@ Partial Class frmCatering
         Me.radPita.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radPita.Location = New System.Drawing.Point(37, 123)
         Me.radPita.Name = "radPita"
-        Me.radPita.Size = New System.Drawing.Size(76, 29)
+        Me.radPita.Size = New System.Drawing.Size(145, 29)
         Me.radPita.TabIndex = 8
         Me.radPita.TabStop = True
-        Me.radPita.Text = "Pita"
+        Me.radPita.Text = "Pita - 44.99"
         Me.radPita.UseVisualStyleBackColor = True
         '
         'radGrill
@@ -148,10 +148,10 @@ Partial Class frmCatering
         Me.radGrill.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radGrill.Location = New System.Drawing.Point(37, 169)
         Me.radGrill.Name = "radGrill"
-        Me.radGrill.Size = New System.Drawing.Size(81, 29)
+        Me.radGrill.Size = New System.Drawing.Size(150, 29)
         Me.radGrill.TabIndex = 9
         Me.radGrill.TabStop = True
-        Me.radGrill.Text = "Grill"
+        Me.radGrill.Text = "Grill - 54.99"
         Me.radGrill.UseVisualStyleBackColor = True
         '
         'radVeggie
@@ -160,10 +160,10 @@ Partial Class frmCatering
         Me.radVeggie.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radVeggie.Location = New System.Drawing.Point(37, 215)
         Me.radVeggie.Name = "radVeggie"
-        Me.radVeggie.Size = New System.Drawing.Size(101, 29)
+        Me.radVeggie.Size = New System.Drawing.Size(170, 29)
         Me.radVeggie.TabIndex = 10
         Me.radVeggie.TabStop = True
-        Me.radVeggie.Text = "Veggie"
+        Me.radVeggie.Text = "Veggie - 29.99"
         Me.radVeggie.UseVisualStyleBackColor = True
         '
         'grpPlatterOptions
@@ -264,9 +264,11 @@ Partial Class frmCatering
         '
         'frmCatering
         '
+        Me.AcceptButton = Me.btnCalculate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Moccasin
+        Me.CancelButton = Me.btnClear
         Me.ClientSize = New System.Drawing.Size(940, 675)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnCalculate)
