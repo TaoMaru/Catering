@@ -49,7 +49,7 @@ Partial Class frmCatering
         'lblHeading
         '
         Me.lblHeading.Font = New System.Drawing.Font("Century Schoolbook", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeading.Location = New System.Drawing.Point(81, 9)
+        Me.lblHeading.Location = New System.Drawing.Point(83, 9)
         Me.lblHeading.Name = "lblHeading"
         Me.lblHeading.Size = New System.Drawing.Size(291, 72)
         Me.lblHeading.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class frmCatering
         'lblSubheading
         '
         Me.lblSubheading.Font = New System.Drawing.Font("Century Schoolbook", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubheading.Location = New System.Drawing.Point(115, 68)
+        Me.lblSubheading.Location = New System.Drawing.Point(117, 68)
         Me.lblSubheading.Name = "lblSubheading"
         Me.lblSubheading.Size = New System.Drawing.Size(222, 47)
         Me.lblSubheading.TabIndex = 1
@@ -99,7 +99,7 @@ Partial Class frmCatering
         'lblPayment
         '
         Me.lblPayment.Font = New System.Drawing.Font("Century Schoolbook", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPayment.Location = New System.Drawing.Point(115, 578)
+        Me.lblPayment.Location = New System.Drawing.Point(169, 588)
         Me.lblPayment.Name = "lblPayment"
         Me.lblPayment.Size = New System.Drawing.Size(148, 43)
         Me.lblPayment.TabIndex = 5
@@ -168,13 +168,15 @@ Partial Class frmCatering
         '
         'grpPlatterOptions
         '
+        Me.grpPlatterOptions.BackColor = System.Drawing.Color.DarkKhaki
         Me.grpPlatterOptions.Controls.Add(Me.radFruit)
         Me.grpPlatterOptions.Controls.Add(Me.radVeggie)
         Me.grpPlatterOptions.Controls.Add(Me.radDeliMeat)
         Me.grpPlatterOptions.Controls.Add(Me.radGrill)
         Me.grpPlatterOptions.Controls.Add(Me.radPita)
         Me.grpPlatterOptions.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpPlatterOptions.Location = New System.Drawing.Point(65, 131)
+        Me.grpPlatterOptions.ForeColor = System.Drawing.Color.Black
+        Me.grpPlatterOptions.Location = New System.Drawing.Point(102, 128)
         Me.grpPlatterOptions.Name = "grpPlatterOptions"
         Me.grpPlatterOptions.Size = New System.Drawing.Size(272, 253)
         Me.grpPlatterOptions.TabIndex = 11
@@ -184,7 +186,7 @@ Partial Class frmCatering
         'lblTotalCost
         '
         Me.lblTotalCost.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCost.Location = New System.Drawing.Point(343, 563)
+        Me.lblTotalCost.Location = New System.Drawing.Point(343, 574)
         Me.lblTotalCost.Name = "lblTotalCost"
         Me.lblTotalCost.Size = New System.Drawing.Size(596, 72)
         Me.lblTotalCost.TabIndex = 12
@@ -218,10 +220,12 @@ Partial Class frmCatering
         '
         'grpPayOption
         '
+        Me.grpPayOption.BackColor = System.Drawing.Color.DarkKhaki
         Me.grpPayOption.Controls.Add(Me.radPrePay)
         Me.grpPayOption.Controls.Add(Me.radPickupPay)
         Me.grpPayOption.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpPayOption.Location = New System.Drawing.Point(65, 403)
+        Me.grpPayOption.ForeColor = System.Drawing.Color.Black
+        Me.grpPayOption.Location = New System.Drawing.Point(102, 400)
         Me.grpPayOption.Name = "grpPayOption"
         Me.grpPayOption.Size = New System.Drawing.Size(272, 135)
         Me.grpPayOption.TabIndex = 15
@@ -230,28 +234,39 @@ Partial Class frmCatering
         '
         'btnCalculate
         '
+        Me.btnCalculate.BackColor = System.Drawing.Color.DarkKhaki
+        Me.btnCalculate.FlatAppearance.BorderColor = System.Drawing.Color.PapayaWhip
+        Me.btnCalculate.FlatAppearance.BorderSize = 2
+        Me.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCalculate.Font = New System.Drawing.Font("Century Schoolbook", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalculate.ForeColor = System.Drawing.Color.Black
         Me.btnCalculate.Location = New System.Drawing.Point(476, 434)
         Me.btnCalculate.Name = "btnCalculate"
         Me.btnCalculate.Size = New System.Drawing.Size(198, 49)
         Me.btnCalculate.TabIndex = 16
         Me.btnCalculate.Text = "Calculate"
-        Me.btnCalculate.UseVisualStyleBackColor = True
+        Me.btnCalculate.UseVisualStyleBackColor = False
         '
         'btnClear
         '
+        Me.btnClear.BackColor = System.Drawing.Color.DarkKhaki
+        Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.PapayaWhip
+        Me.btnClear.FlatAppearance.BorderSize = 2
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Century Schoolbook", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.Black
         Me.btnClear.Location = New System.Drawing.Point(730, 434)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(198, 49)
         Me.btnClear.TabIndex = 17
         Me.btnClear.Text = "Clear"
-        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'frmCatering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Moccasin
         Me.ClientSize = New System.Drawing.Size(940, 675)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnCalculate)
