@@ -24,20 +24,6 @@ Public Class frmCatering
     Const _cstrPrePay As String = "Pre-Pay"
     Const _cstrPickup As String = "Pay at Pickup"
 
-    'declare order variables:
-    Dim strPoints As String
-    Dim intPoints As Integer
-    Dim decTotalCost As Decimal
-    Dim strTotalCost As String
-    Dim decDiscount As Decimal
-    Dim intDiscountMuliplier As Integer
-    Dim strOrderChoice As String
-    Dim strPaymentChoice As String
-    Dim strCostMsg As String = "Your order {0} costs {1} using {2} after discount of {3} Loyalty Points"
-
-    'declare msgBox
-    Dim strAlert As String = "Please enter a positive number or 0"
-
     Private Sub frmCatering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'uses btnClear event to reset form
         btnClear.PerformClick()
@@ -45,7 +31,7 @@ Public Class frmCatering
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         'resets txtPoints to blank, resets focus onto txtPoints
-        'resests rad selections
+        'resets rad selections & clears orderChoice, totalCost, discount values
         txtPoints.Clear()
         txtPoints.Focus()
         radFruit.Checked = True
@@ -55,6 +41,20 @@ Public Class frmCatering
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
         ' checks platter choice, calculates discount, displays total
+        'declare order variables:
+        Dim strPoints As String
+        Dim intPoints As Integer
+        Dim decTotalCost As Decimal
+        Dim strTotalCost As String
+        Dim decDiscount As Decimal
+        Dim intDiscountMuliplier As Integer
+        Dim strOrderChoice As String
+        Dim strPaymentChoice As String
+        Dim strCostMsg As String = "Your order {0} costs {1} using {2} after discount of {3} Loyalty Points"
+
+        'declare msgBox
+        Dim strAlert As String = "Please enter a positive number or 0"
+
         strPoints = txtPoints.Text
         If IsNumeric(strPoints) Then
             intPoints = Convert.ToInt32(strPoints)
