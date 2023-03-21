@@ -12,7 +12,7 @@ Public Class frmCatering
     Const _cdecDeli As Decimal = 34.99D
     Const _cdecPita As Decimal = 44.99D
     Const _cdecGrill As Decimal = 54.99D
-    Const _cdecVeggie As Decimal = 39.99D
+    Const _cdecVeggie As Decimal = 29.99D
     Const _cdecLoyaltyRate As Decimal = 0.05D
 
     'declare constant variables, order choice:
@@ -60,43 +60,44 @@ Public Class frmCatering
             intPoints = Convert.ToInt32(strPoints)
             If intPoints > 0 Then
                 intDiscountMuliplier = intPoints \ 10
-            ElseIf intPoints = 0 Then
-                intDiscountMuliplier = 0
+                'check which platter selected:
+                If radFruit.Checked Then
+                    decTotalCost = _cdecFruit
+                    strOrderChoice = _cstrFruit
+                ElseIf radDeliMeat.Checked Then
+                    decTotalCost = _cdecDeli
+                    strOrderChoice = _cstrDeli
+                ElseIf radPita.Checked Then
+                    decTotalCost = _cdecPita
+                    strOrderChoice = _cstrPita
+                ElseIf radGrill.Checked Then
+                    decTotalCost = _cdecGrill
+                    strOrderChoice = _cstrGrill
+                Else
+                    decTotalCost = _cdecVeggie
+                    strOrderChoice = _cstrVeggie
+                End If
+                'calculate discount
+                decDiscount = _cdecLoyaltyRate * intDiscountMuliplier * decTotalCost
+                decTotalCost -= decDiscount
+                If decTotalCost < 0 Then
+                    decTotalCost = 0
+                End If
+                'display total cost
+                strTotalCost = decTotalCost.ToString("C2")
+                If radPrePay.Checked Then
+                    strPaymentChoice = _cstrPrePay
+                Else
+                    strPaymentChoice = _cstrPickup
+                End If
+                strCostMsg = String.Format(strCostMsg, strOrderChoice, strTotalCost, strPaymentChoice,
+                                           strPoints)
+                lblTotalCost.Text = strCostMsg
             Else
                 MsgBox(strAlert, vbOKOnly, "Invalid input")
                 txtPoints.Clear()
                 txtPoints.Focus()
             End If
-            'check which platter selected:
-            If radFruit.Checked Then
-                decTotalCost = _cdecFruit
-                strOrderChoice = _cstrFruit
-            ElseIf radDeliMeat.Checked Then
-                decTotalCost = _cdecDeli
-                strOrderChoice = _cstrDeli
-            ElseIf radPita.Checked Then
-                decTotalCost = _cdecPita
-                strOrderChoice = _cstrPita
-            ElseIf radGrill.Checked Then
-                decTotalCost = _cdecGrill
-                strOrderChoice = _cstrGrill
-            Else
-                decTotalCost = _cdecVeggie
-                strOrderChoice = _cstrVeggie
-            End If
-            'calculate discount
-            decDiscount = _cdecLoyaltyRate * intDiscountMuliplier * decTotalCost
-            decTotalCost -= decDiscount
-            'display total cost
-            strTotalCost = decTotalCost.ToString("C2")
-            If radPrePay.Checked Then
-                strPaymentChoice = _cstrPrePay
-            Else
-                strPaymentChoice = _cstrPickup
-            End If
-            strCostMsg = String.Format(strCostMsg, strOrderChoice, strTotalCost, strPaymentChoice,
-                                       strPoints)
-            lblTotalCost.Text = strCostMsg
         Else
             MsgBox(strAlert, vbOKOnly, "Invalid input")
             txtPoints.Clear()

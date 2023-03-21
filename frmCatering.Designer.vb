@@ -250,6 +250,7 @@ Partial Class frmCatering
         'btnClear
         '
         Me.btnClear.BackColor = System.Drawing.Color.DarkKhaki
+        Me.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.PapayaWhip
         Me.btnClear.FlatAppearance.BorderSize = 2
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
