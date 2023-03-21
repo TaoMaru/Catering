@@ -59,7 +59,7 @@ Public Class frmCatering
         If IsNumeric(strPoints) Then
             intPoints = Convert.ToInt32(strPoints)
             If intPoints > 0 Then
-                intDiscountMuliplier = intPoints / 10
+                intDiscountMuliplier = intPoints \ 10
             ElseIf intPoints = 0 Then
                 intDiscountMuliplier = 0
             Else
