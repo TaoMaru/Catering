@@ -5,6 +5,9 @@
 ''          loyalty points. The total cost is calculated with a discount applied at a rate
 ''          determined by loyalty points entered, platter choice, and payment option.
 ''          Total cost is displayed, and user may clear input and start over at any time.
+
+Option Strict On
+Option Explicit On
 Public Class frmCatering
 
     'declare constant variables, pricing:
